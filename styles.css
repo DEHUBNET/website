@@ -18,6 +18,12 @@
     color: white;
 }
 
+/* Logo styling */
+.logo {
+    width: 150px; /* Adjust size as needed */
+    margin-bottom: 20px; /* Space between logo and text */
+}
+
 /* Hamburger menu */
 .hamburger-menu {
     position: absolute;
@@ -28,28 +34,37 @@
     color: white;
 }
 
-/* Hidden menu */
-.menu {
+/* Menu overlay */
+.menu-overlay {
     display: none;
-    position: absolute;
-    top: 50px;
-    right: 20px;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    border-radius: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Shading background */
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
 }
 
-.menu ul {
+.menu-overlay ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
-.menu ul li {
-    margin: 10px 0;
+.menu-overlay ul li {
+    margin: 20px 0;
 }
 
-.menu ul li a {
+.menu-overlay ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.menu-overlay ul li a:hover {
+    color: #f0a500; /* Color change on hover */
 }
