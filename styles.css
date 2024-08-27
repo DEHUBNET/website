@@ -1,27 +1,28 @@
 /* Fullscreen video */
 #bg-video {
     position: fixed;
-    right: 0;
-    bottom: 0;
+    top: 0;
+    left: 0;
     min-width: 100%;
     min-height: 100%;
+    width: auto;
+    height: auto;
     z-index: -1;
+    overflow: hidden;
 }
 
-/* Content overlay */
-.content {
+/* Logo container to center the logo */
+.logo-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
+    z-index: 1; /* Ensure it is on top of the video */
 }
 
 /* Logo styling */
 .logo {
     width: 150px; /* Adjust size as needed */
-    margin-bottom: 20px; /* Space between logo and text */
 }
 
 /* Hamburger menu */
@@ -32,6 +33,7 @@
     font-size: 30px;
     cursor: pointer;
     color: white;
+    z-index: 1; /* Ensure it is on top of the video */
 }
 
 /* Menu overlay */
@@ -56,6 +58,7 @@
 
 .menu-overlay ul li {
     margin: 20px 0;
+    overflow: hidden;
 }
 
 .menu-overlay ul li a {
@@ -63,8 +66,43 @@
     text-decoration: none;
     font-size: 24px;
     transition: color 0.3s;
+    display: inline-block;
+    position: relative;
 }
 
-.menu-overlay ul li a:hover {
-    color: #f0a500; /* Color change on hover */
+/* Animation for menu items */
+.menu-overlay ul li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: #f0a500;
+    transition: width 0.3s;
+}
+
+.menu-overlay ul li a:hover::before {
+    width: 100%;
+}
+
+.menu-overlay.show {
+    display: flex;
+}
+
+/* Menu item line animation */
+.menu-overlay ul li a {
+    animation: growShrink 0.5s forwards;
+}
+
+@keyframes growShrink {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 110%;
+    }
+    100% {
+        width: 100%;
+    }
 }
