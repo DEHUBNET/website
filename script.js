@@ -1,8 +1,8 @@
 function toggleMenu() {
-    const menu = document.getElementById("menu");
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
+    const menu = document.getElementById('menu');
+    if (menu.classList.contains('show')) {
+        menu.classList.remove('show');
     } else {
-        menu.style.display = "block";
+        menu.classList.add('show');
     }
 }
