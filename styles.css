@@ -35,6 +35,17 @@
     z-index: 1; /* Ensure it is on top of the video */
 }
 
+/* Hamburger menu */
+.hamburger-menu-black {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+    z-index: 1; /* Ensure it is on top of the video */
+}
+
 /* Menu overlay */
 .menu-overlay {
     display: none;
