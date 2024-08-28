@@ -8,18 +8,29 @@
         body, html {
             margin: 0;
             padding: 0;
+            overflow: auto;
             height: 100%;
-            overflow: hidden;
         }
-        .full-page-image {
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
         }
     </style>
 </head>
 <body>
-    <img src="our story.png" alt="Our Story - RESOURCES ERROR" class="full-page-image">
+    <div class="container">
+        <img src="our_story.png" alt="Our Story - RESOURCES ERROR">
+    </div>
+</body>
+</html>
+
     
         <!-- Hamburger menu -->
     <div class="hamburger-menu" onclick="toggleMenu()">
