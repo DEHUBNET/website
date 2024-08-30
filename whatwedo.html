@@ -9,15 +9,23 @@
             font-family: 'Operetta';
             src: url('Operetta-Regular.ttf'); /* Include the correct path to the Operetta font file */
         }
+
         body {
             font-family: 'Operetta', Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
+            background-image: url('sfondowhatwedo.png'); /* Set the background image */
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Center the background image */
+            color: white; /* Set default text color to white for better readability */
         }
+
         .logo {
             width: 100px;
-            margin: 0 auto;
+            margin: 20px auto;
             display: block;
         }
+
         h1 {
             font-family: 'Arial Black', Arial, sans-serif;
             font-size: 28px;
@@ -25,31 +33,84 @@
             margin-top: 40px;
             text-align: center;
         }
+
         p {
             font-size: 16px;
             margin: 20px auto;
             width: 60%;
             text-align: left;
         }
+
         .columns {
             display: flex;
             justify-content: center;
             margin-top: 40px;
+            flex-wrap: wrap; /* Ensure columns wrap on smaller screens */
         }
+
         .column {
             width: 30%;
             padding: 0 20px;
             text-align: left;
         }
+
         .column h2 {
             font-size: 20px;
             font-weight: bold;
             margin-bottom: 10px;
-            text-align: left;
         }
+
         .column ul {
             list-style-type: square;
             padding-left: 20px;
+        }
+
+        /* Hamburger menu styling */
+        .hamburger-menu-black {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 24px;
+            z-index: 1000; /* Ensure it stays on top of other content */
+        }
+
+        /* Menu overlay styling */
+        .menu-overlay {
+            display: none; /* Hide by default */
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            color: white;
+            width: 250px;
+            height: 100%;
+            overflow-y: auto;
+            z-index: 1000; /* Ensure it stays on top of other content */
+            padding: 20px;
+        }
+
+        .menu-overlay ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .menu-overlay li {
+            margin: 10px 0;
+        }
+
+        .menu-overlay a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .menu-overlay a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
