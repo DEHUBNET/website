@@ -25,25 +25,20 @@
 }
 
 /* Hamburger menu */
-.hamburger-menu {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-    z-index: 1; /* Ensure it is on top of the video */
-}
-
-/* Hamburger menu */
+.hamburger-menu,
 .hamburger-menu-black {
     position: absolute;
     top: 20px;
     right: 20px;
     font-size: 30px;
     cursor: pointer;
-    color: black;
     z-index: 1; /* Ensure it is on top of the video */
+    font-family: 'Operetta', Arial, sans-serif; /* Apply Operetta font */
+}
+
+/* Specific color for black hamburger menu */
+.hamburger-menu-black {
+    color: black;
 }
 
 /* Menu overlay */
@@ -60,6 +55,7 @@
     align-items: center;
 }
 
+/* Menu overlay list styling */
 .menu-overlay ul {
     list-style: none;
     padding: 0;
@@ -78,6 +74,7 @@
     transition: color 0.3s;
     display: inline-block;
     position: relative;
+    font-family: 'Operetta', Arial, sans-serif; /* Apply Operetta font */
 }
 
 /* Animation for menu items */
@@ -115,22 +112,6 @@
     100% {
         width: 100%;
     }
-    {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* Light background color */
-    text-align: center; /* Centering content horizontally */
-}
-
-/* Logo container to center the logo */
-.logo-container {
-    margin-top: 20px; /* Adjust top margin as needed */
-}
-
-/* Logo styling */
-.logo {
-    width: 150px; /* Adjust size as needed */
 }
 
 /* Main content styling */
@@ -174,4 +155,10 @@
     font-size: 16px; /* Size of the paragraph text */
     line-height: 1.6; /* Line height for better readability */
     color: #666; /* Slightly lighter text color */
+}
+
+/* Add font-face for Operetta */
+@font-face {
+    font-family: 'Operetta';
+    src: url('Operetta-Regular.ttf'); /* Ensure this path is correct */
 }
