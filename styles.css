@@ -36,11 +36,6 @@
     font-family: 'Operetta', Arial, sans-serif; /* Apply Operetta font */
 }
 
-/* Specific color for black hamburger menu */
-.hamburger-menu-black {
-    color: black;
-}
-
 /* Menu overlay */
 .menu-overlay {
     display: none;
