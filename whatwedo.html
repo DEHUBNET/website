@@ -20,6 +20,15 @@
             color: black; /* Default text color */
         }
 
+        .container {
+            background-color: rgba(211, 211, 211, 0.6); /* Light grey with 60% opacity */
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%; /* Adjust as needed */
+            max-width: 1200px; /* Maximum width for larger screens */
+            border-radius: 10px; /* Rounded corners */
+        }
+
         .logo {
             width: 100px;
             margin: 20px auto;
@@ -32,15 +41,14 @@
             font-weight: bold;
             margin-top: 40px;
             text-align: center;
-            color: white; /* Title text color */
+            color: black; /* Title text color */
         }
 
         p {
             font-size: 16px;
             margin: 20px auto;
-            width: 60%;
             text-align: left;
-            color: white; /* Paragraph text color */
+            color: black; /* Paragraph text color */
         }
 
         .columns {
@@ -60,13 +68,13 @@
             font-size: 20px;
             font-weight: bold;
             margin-bottom: 10px;
-            color: white; /* Column headings color */
+            color: black; /* Column headings color */
         }
 
         .column ul {
             list-style-type: square;
             padding-left: 20px;
-            color: white; /* List items color */
+            color: black; /* List items color */
         }
 
         /* Hamburger menu styling */
@@ -74,7 +82,7 @@
             position: fixed;
             top: 20px;
             right: 20px;
-            background-color: white;
+            background-color: black;
             color: white;
             padding: 10px;
             border-radius: 5px;
@@ -123,46 +131,49 @@
     <!-- Logo -->
     <img src="logo.png" alt="DEHUB Logo" class="logo">
 
-    <!-- Title -->
-    <h1>WHAT WE DO</h1>
+    <!-- Container for text with background -->
+    <div class="container">
+        <!-- Title -->
+        <h1>WHAT WE DO</h1>
 
-    <!-- Description -->
-    <p>We are a creative hub, working across architecture, design and art. We craft impactful brand strategies to captivate customers and we create architectural and design projects. From conceptualization to execution we prioritize attention to detail and creativity, ensuring that each project is a harmonious blend of aesthetic and functionality.</p>
+        <!-- Description -->
+        <p>We are a creative hub, working across architecture, design and art. We craft impactful brand strategies to captivate customers and we create architectural and design projects. From conceptualization to execution we prioritize attention to detail and creativity, ensuring that each project is a harmonious blend of aesthetic and functionality.</p>
 
-    <!-- Columns -->
-    <div class="columns">
-        <!-- Column 1: Strategy -->
-        <div class="column">
-            <h2>Strategy</h2>
-            <ul>
-                <li>Brand Building</li>
-                <li>Partnership</li>
-                <li>Business Development</li>
-            </ul>
-        </div>
+        <!-- Columns -->
+        <div class="columns">
+            <!-- Column 1: Strategy -->
+            <div class="column">
+                <h2>Strategy</h2>
+                <ul>
+                    <li>Brand Building</li>
+                    <li>Partnership</li>
+                    <li>Business Development</li>
+                </ul>
+            </div>
 
-        <!-- Column 2: Creativity -->
-        <div class="column">
-            <h2>Creativity</h2>
-            <ul>
-                <li>Creative Direction</li>
-                <li>Creative Collaboration</li>
-                <li>Interior Design Project</li>
-                <li>Industrial Design Project</li>
-                <li>Architectural Project</li>
-            </ul>
-        </div>
+            <!-- Column 2: Creativity -->
+            <div class="column">
+                <h2>Creativity</h2>
+                <ul>
+                    <li>Creative Direction</li>
+                    <li>Creative Collaboration</li>
+                    <li>Interior Design Project</li>
+                    <li>Industrial Design Project</li>
+                    <li>Architectural Project</li>
+                </ul>
+            </div>
 
-        <!-- Column 3: Production -->
-        <div class="column">
-            <h2>Production</h2>
-            <ul>
-                <li>Turn Key Project</li>
-                <li>Buying Office</li>
-                <li>Production and Logistic</li>
-                <li>Event Production</li>
-                <li>Experience Creation</li>
-            </ul>
+            <!-- Column 3: Production -->
+            <div class="column">
+                <h2>Production</h2>
+                <ul>
+                    <li>Turn Key Project</li>
+                    <li>Buying Office</li>
+                    <li>Production and Logistic</li>
+                    <li>Event Production</li>
+                    <li>Experience Creation</li>
+                </ul>
+            </div>
         </div>
     </div>
     
