@@ -13,14 +13,24 @@
             box-sizing: border-box;
         }
 
+        /* Import the Operetta font */
+        @font-face {
+            font-family: 'Operetta';
+            src: url('https://fonts.googleapis.com/css2?family=Operetta:wght@400;700&display=swap');
+        }
+
         /* Set the background color for the page */
         body {
             background-color: #f5f5f5; /* Light grey background */
-            font-family: Arial, sans-serif;
+            font-family: Arial, sans-serif; /* Default font for the body */
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            margin: 0;
+            padding: 0;
+            position: relative;
         }
 
         /* Center the black square */
@@ -38,22 +48,34 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
         }
 
+        .contact-square p {
+            margin: 10px 0; /* Adjust margin for spacing between lines */
+            font-family: 'Operetta', sans-serif; /* Apply Operetta font to text */
+        }
+
+        .contact-square p:first-of-type {
+            font-family: Arial, sans-serif; /* Apply default font to 'HEADQUARTER' */
+            font-weight: bold;
+        }
+
         /* Instagram logo and handle style */
         .instagram {
-            margin-top: 20px;
+            position: absolute;
+            bottom: 20px; /* Distance from the bottom of the viewport */
             display: flex;
             align-items: center;
             justify-content: center;
+            font-family: 'Operetta', sans-serif;
         }
 
         .instagram img {
-            width: 20px; /* Adjust the size of the Instagram logo */
-            height: 20px;
+            width: 30px; /* Adjust the size of the Instagram logo */
+            height: 30px;
             margin-right: 10px; /* Space between logo and handle */
         }
 
         .instagram span {
-            color: white;
+            color: black; /* Color of the Instagram handle text */
         }
     </style>
 </head>
@@ -66,12 +88,12 @@
         <p>20122 MILANO</p>
         <p>info@dehubnet.com</p>
         <p>WWW.DEHUBNET.COM</p>
+    </div>
 
-        <!-- Instagram section -->
-        <div class="instagram">
-            <img src="ig_logo.png" alt="Instagram Logo">
-            <span>@dehubnet</span>
-        </div>
+    <!-- Instagram section -->
+    <div class="instagram">
+        <img src="ig_logo.png" alt="Instagram Logo">
+        <span>@dehubnet</span>
     </div>
 
 </body>
