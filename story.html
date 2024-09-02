@@ -22,6 +22,49 @@
             max-width: none;
             max-height: none;
         }
+                /* Hamburger menu styling */
+        .hamburger-menu-black {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 24px;
+            z-index: 1000; /* Ensure it stays on top of other content */
+        }
+
+        /* Menu overlay styling */
+        .menu-overlay {
+            display: none; /* Hide by default */
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            color: white;
+            width: 250px;
+            height: 100%;
+            overflow-y: auto;
+            z-index: 1000; /* Ensure it stays on top of other content */
+            padding: 20px;
+        }
+
+        .menu-overlay ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .menu-overlay li {
+            margin: 10px 0;
+        }
+
+        .menu-overlay a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
