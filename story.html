@@ -3,26 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Story | DEHUBNET</title>
+    <title>DEHUB - What We Do</title>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            overflow: auto;
-            height: 100%;
+        @font-face {
+            font-family: 'Operetta';
+            src: url('Operetta-Regular.ttf'); /* Ensure this path is correct */
         }
-        .image-container {
+
+        body {
+            font-family: 'Operetta', Arial, sans-serif;
+            margin: 5;
+            padding: 2;
+            background-color: black; /* Set background color to black */
+            color: white; /* Default text color */
+        }
+
+        .logow {
+            width: 100px; /* Keep the size of the logo */
+            margin: 20px auto 0 auto; /* Center horizontally and add top margin */
+            display: block;
+            position: relative;
+            top: 20px; /* Move the logo slightly down from the top of the page */
+        }
+
+        h1 {
+            font-family: 'Arial Black', Arial, sans-serif;
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: 40px;
+            text-align: center;
+            color: white; /* Title text color */
+        }
+
+        p {
+            font-size: 22px;
+            margin: 20px auto;
+            text-align: center;
+            color: white; /* Paragraph text color */
+        }
+
+        .columns {
             display: flex;
             justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            margin-top: 40px;
+            flex-wrap: wrap; /* Ensure columns wrap on smaller screens */
         }
-        img {
-            display: block;
-            max-width: none;
-            max-height: none;
+
+        .column {
+            width: 30%;
+            padding: 0 20px;
+            text-align: left;
         }
-         /* Hamburger menu styling */
+
+        .column h2 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: white; /* Column headings color */
+        }
+
+        .column ul {
+            list-style-type: square;
+            padding-left: 20px;
+            color: white; /* List items color */
+        }
+
+        /* Hamburger menu styling */
         .hamburger-menu-black {
             position: fixed;
             top: 20px;
@@ -59,7 +105,8 @@
         .menu-overlay li {
             margin: 10px 0;
         }
-         .menu-overlay a {
+
+        .menu-overlay a {
             color: white;
             text-decoration: none;
             font-size: 18px;
@@ -71,9 +118,53 @@
     </style>
 </head>
 <body>
-    <div class="image-container">
-        <img src="our story.png" alt="Our Story">
+
+    <!-- Logo -->
+    <img src="logow.png" alt="DEHUB Logo" class="logow">
+
+    <!-- Title -->
+    <h1>WHAT WE DO</h1>
+
+    <!-- Description -->
+    <p>We are a creative hub, working across architecture, design and art. We craft impactful brand strategies to captivate customers and we create architectural and design projects. From conceptualization to execution we prioritize attention to detail and creativity, ensuring that each project is a harmonious blend of aesthetic and functionality.</p>
+
+    <!-- Columns -->
+    <div class="columns">
+        <!-- Column 1: Strategy -->
+        <div class="column">
+            <h2>Strategy</h2>
+            <ul>
+                <li>Brand Building</li>
+                <li>Partnership</li>
+                <li>Business Development</li>
+            </ul>
+        </div>
+
+        <!-- Column 2: Creativity -->
+        <div class="column">
+            <h2>Creativity</h2>
+            <ul>
+                <li>Creative Direction</li>
+                <li>Creative Collaboration</li>
+                <li>Interior Design Project</li>
+                <li>Industrial Design Project</li>
+                <li>Architectural Project</li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Production -->
+        <div class="column">
+            <h2>Production</h2>
+            <ul>
+                <li>Turn Key Project</li>
+                <li>Buying Office</li>
+                <li>Production and Logistic</li>
+                <li>Event Production</li>
+                <li>Experience Creation</li>
+            </ul>
+        </div>
     </div>
+    
     <!-- Hamburger menu -->
     <div class="hamburger-menu-black" onclick="toggleMenu()">
         ☰
@@ -89,6 +180,16 @@
         </ul>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+    </script>
+
 </body>
 </html>
