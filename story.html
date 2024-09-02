@@ -3,193 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEHUB - What We Do</title>
+    <title>Who we are | DEHUBNET</title>
     <style>
-        @font-face {
-            font-family: 'Operetta';
-            src: url('Operetta-Regular.ttf'); /* Ensure this path is correct */
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+            height: 100%;
         }
-
-        body {
-            font-family: 'Operetta', Arial, sans-serif;
-            margin: 5;
-            padding: 2;
-            background-color: black; /* Set background color to black */
-            color: white; /* Default text color */
-        }
-
-        .logow {
-            width: 100px; /* Keep the size of the logo */
-            margin: 20px auto 0 auto; /* Center horizontally and add top margin */
-            display: block;
-            position: relative;
-            top: 20px; /* Move the logo slightly down from the top of the page */
-        }
-
-        h1 {
-            font-family: 'Arial Black', Arial, sans-serif;
-            font-size: 28px;
-            font-weight: bold;
-            margin-top: 40px;
-            text-align: center;
-            color: white; /* Title text color */
-        }
-
-        p {
-            font-size: 22px;
-            margin: 20px auto;
-            text-align: center;
-            color: white; /* Paragraph text color */
-        }
-
-        .columns {
+        .image-container {
             display: flex;
             justify-content: center;
-            margin-top: 40px;
-            flex-wrap: wrap; /* Ensure columns wrap on smaller screens */
+            align-items: center;
+            min-height: 100vh;
         }
-
-        .column {
-            width: 30%;
-            padding: 0 20px;
-            text-align: left;
-        }
-
-        .column h2 {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: white; /* Column headings color */
-        }
-
-        .column ul {
-            list-style-type: square;
-            padding-left: 20px;
-            color: white; /* List items color */
-        }
-
-        /* Hamburger menu styling */
-        .hamburger-menu-black {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: black;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 24px;
-            z-index: 1000; /* Ensure it stays on top of other content */
-        }
-
-        /* Menu overlay styling */
-        .menu-overlay {
-            display: none; /* Hide by default */
-            position: fixed;
-            top: 0;
-            right: 0;
-            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
-            color: white;
-            width: 250px;
-            height: 100%;
-            overflow-y: auto;
-            z-index: 1000; /* Ensure it stays on top of other content */
-            padding: 20px;
-        }
-
-        .menu-overlay ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .menu-overlay li {
-            margin: 10px 0;
-        }
-
-        .menu-overlay a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        .menu-overlay a:hover {
-            text-decoration: underline;
+        img {
+            display: block;
+            max-width: none;
+            max-height: none;
         }
     </style>
 </head>
 <body>
-
-    <!-- Logo -->
-    <img src="logow.png" alt="DEHUB Logo" class="logow">
-
-    <!-- Title -->
-    <h1>WHAT WE DO</h1>
-
-    <!-- Description -->
-    <p>We are a creative hub, working across architecture, design and art. We craft impactful brand strategies to captivate customers and we create architectural and design projects. From conceptualization to execution we prioritize attention to detail and creativity, ensuring that each project is a harmonious blend of aesthetic and functionality.</p>
-
-    <!-- Columns -->
-    <div class="columns">
-        <!-- Column 1: Strategy -->
-        <div class="column">
-            <h2>Strategy</h2>
-            <ul>
-                <li>Brand Building</li>
-                <li>Partnership</li>
-                <li>Business Development</li>
-            </ul>
-        </div>
-
-        <!-- Column 2: Creativity -->
-        <div class="column">
-            <h2>Creativity</h2>
-            <ul>
-                <li>Creative Direction</li>
-                <li>Creative Collaboration</li>
-                <li>Interior Design Project</li>
-                <li>Industrial Design Project</li>
-                <li>Architectural Project</li>
-            </ul>
-        </div>
-
-        <!-- Column 3: Production -->
-        <div class="column">
-            <h2>Production</h2>
-            <ul>
-                <li>Turn Key Project</li>
-                <li>Buying Office</li>
-                <li>Production and Logistic</li>
-                <li>Event Production</li>
-                <li>Experience Creation</li>
-            </ul>
-        </div>
+    <div class="image-container">
+        <img src="our story.png" alt="Our Story">
     </div>
-    
-    <!-- Hamburger menu -->
-    <div class="hamburger-menu-black" onclick="toggleMenu()">
-        ☰
-    </div>
-
-    <!-- Menu overlay with centered options -->
-    <div class="menu-overlay" id="menu">
-        <ul>
-            <li><a href="index.html">Homepage</a></li>
-            <li><a href="whoweare.html">Who we are</a></li>
-            <li><a href="story.html">Our Story</a></li>
-            <li><a href="contacts.html">Contact</a></li>
-        </ul>
-    </div>
-
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById('menu');
-            if (menu.style.display === 'block') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'block';
-            }
-        }
-    </script>
-
 </body>
 </html>
