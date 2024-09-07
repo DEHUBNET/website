@@ -39,13 +39,13 @@
         }
 
         p {
-              
-        font-size: 22px;
-    margin: 100px;
-    text-align: justify; /* This will justify the text */
-    text-justify: inter-word; /* This will ensure the words are justified */
-    color: white; /* Paragraph text color */
-}
+            font-size: 22px;
+            margin: 100px;
+            text-align: justify; /* This will justify the text */
+            text-justify: inter-word; /* This will ensure the words are justified */
+            color: white; /* Paragraph text color */
+        }
+
         .columns {
             display: flex;
             justify-content: center;
@@ -101,6 +101,11 @@
             padding: 20px;
         }
 
+        /* Show the menu when the show class is added */
+        .menu-overlay.show {
+            display: block; /* Show the menu when the show class is active */
+        }
+
         .menu-overlay ul {
             list-style-type: none;
             padding: 0;
@@ -125,7 +130,7 @@
 
     <!-- Logo -->
     <img src="logow.png" alt="DEHUB Logo" class="logow">
-<br>
+    <br>
     <br>
     <br>
     <!-- Title -->
@@ -176,7 +181,7 @@
                 -Production and Logistic
                 <br>
                 -Event Production
-                    <br>
+                <br>
                 -Experience Creation
             </ul>
         </div>
@@ -198,15 +203,11 @@
     </div>
 
    <script>
-function toggleMenu() {
-    const menu = document.getElementById('menu');
-    if (menu.classList.contains('show')) {
-        menu.classList.remove('show');
-    } else {
-        menu.classList.add('show');
-    }
-}
-</script>
+       function toggleMenu() {
+           const menu = document.getElementById('menu');
+           menu.classList.toggle('show'); // Toggle the 'show' class on the menu
+       }
+   </script>
 
 </body>
 </html>
