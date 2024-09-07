@@ -86,24 +86,26 @@
             z-index: 1000; /* Ensure it stays on top of other content */
         }
 
-        /* Menu overlay styling */
+        /* Menu overlay styling for fullscreen */
         .menu-overlay {
             display: none; /* Hide by default */
             position: fixed;
             top: 0;
-            right: 0;
-            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.95); /* Almost fully opaque background */
             color: white;
-            width: 250px;
-            height: 100%;
-            overflow-y: auto;
+            width: 100vw;
+            height: 100vh;
             z-index: 1000; /* Ensure it stays on top of other content */
             padding: 20px;
+            text-align: center;
         }
 
-        /* Show the menu when the show class is added */
         .menu-overlay.show {
-            display: block; /* Show the menu when the show class is active */
+            display: flex; /* Display flex to center content */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .menu-overlay ul {
@@ -112,88 +114,40 @@
         }
 
         .menu-overlay li {
-            margin: 10px 0;
+            margin: 20px 0;
         }
 
         .menu-overlay a {
             color: white;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 24px; /* Increase font size for better visibility */
         }
 
         .menu-overlay a:hover {
             text-decoration: underline;
         }
+
+        /* Logo inside the menu */
+        .menu-overlay .logomenu {
+            width: 150px;
+            height: auto;
+            margin-bottom: 40px; /* Add some space below the logo */
+        }
     </style>
 </head>
 <body>
 
-    <!-- Logo -->
-    <img src="logow.png" alt="DEHUB Logo" class="logow">
-    <br>
-    <br>
-    <br>
-    <!-- Title -->
-    <h1>WHAT WE DO</h1>
-
-    <!-- Description -->
-    <p>We are a creative hub, working across architecture, design and art. We craft impactful brand strategies to captivate customers and we create architectural and design projects. From conceptualization to execution we prioritize attention to detail and creativity, ensuring that each project is a harmonious blend of aesthetic and functionality.</p>
-
-    <!-- Columns -->
-    <div class="columns">
-        <!-- Column 1: Strategy -->
-        <div class="column">
-            
-            <h2>Strategy</h2>
-            <ul>
-                -Brand Building
-                <br>
-                -Partnership
-                <br>
-                -Business Development
-            </ul>
-        </div>
-
-        <!-- Column 2: Creativity -->
-        <div class="column">
-            <h2>Creativity</h2>
-            <ul>
-                -Creative Direction
-                <br>
-                -Creative Collaboration
-                <br>
-                -Interior Design Project
-                <br>
-                -Industrial Design Project
-                <br>
-                -Architectural Project
-            </ul>
-        </div>
-
-        <!-- Column 3: Production -->
-        <div class="column">
-            <h2>Production</h2>
-            <ul>
-                -Turn Key Project
-                <br>
-                -Buying Office
-                <br>
-                -Production and Logistic
-                <br>
-                -Event Production
-                <br>
-                -Experience Creation
-            </ul>
-        </div>
-    </div>
-    
     <!-- Hamburger menu -->
     <div class="hamburger-menu-black" onclick="toggleMenu()">
         ☰
     </div>
 
-    <!-- Menu overlay with centered options -->
+    <!-- Menu overlay -->
     <div class="menu-overlay" id="menu">
+        <!-- Logo -->
+        <img src="logo.png" alt="DEHUB Logo" class="logomenu">
+        
+        <!-- Menu Items -->
         <ul>
             <li><a href="index.html">Homepage</a></li>
             <li><a href="whoweare.html">Who we are</a></li>
