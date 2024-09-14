@@ -16,15 +16,15 @@
 
         body {
             font-family: 'Operetta', Arial, sans-serif;
-            margin: 5;
-            padding: 2;
+            margin: 0;
+            padding: 0;
             background-color: black; /* Set background color to black */
             color: white; /* Default text color */
         }
 
         .logow {
             width: 206px; /* Set width of the logo */
-            height: 133px; /* Set height of the logo */
+            height: auto; /* Maintain aspect ratio */
             margin: 20px auto 0 auto; /* Center horizontally and add top margin */
             display: block; /* Ensures the image is treated as a block element */
         }
@@ -39,8 +39,8 @@
         }
 
         p {
-            font-size: 22px;
-            margin: 100px;
+            font-size: 18px;
+            margin: 20px;
             text-align: justify; /* This will justify the text */
             text-justify: inter-word; /* This will ensure the words are justified */
             color: white; /* Paragraph text color */
@@ -132,6 +132,69 @@
             width: 150px;
             height: auto;
             margin-bottom: 40px; /* Add some space below the logo */
+        }
+
+        /* Responsive Design for Mobile Devices */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+                margin-top: 20px;
+            }
+
+            p {
+                font-size: 16px;
+                margin: 10px;
+            }
+
+            .columns {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .column {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+
+            .column h2 {
+                font-size: 18px;
+            }
+
+            .hamburger-menu-black {
+                font-size: 20px;
+                padding: 8px;
+            }
+
+            .menu-overlay a {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logow {
+                width: 150px;
+                margin-top: 10px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            .column h2 {
+                font-size: 16px;
+            }
+
+            .menu-overlay a {
+                font-size: 18px;
+            }
+
+            .hamburger-menu-black {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
