@@ -35,7 +35,16 @@
     z-index: 1000; /* Ensure it is on top of the video */
     font-family: 'Operetta', Arial, sans-serif; /* Apply Operetta font */
 }
-
+.hamburger-menu-w {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it is on top of the video */
+    font-family: 'Operetta', Arial, sans-serif; /* Apply Operetta font */
+    color: white
+}
 /* Menu overlay */
 .menu-overlay {
     display: none;
