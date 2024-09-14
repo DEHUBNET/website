@@ -19,11 +19,12 @@
         }
         img {
             display: block;
-            max-width: none;
-            max-height: none;
+            max-width: 100%;
+            height: auto;
         }
-                /* Hamburger menu styling */
-        .hamburger-menu-black {
+
+        /* Hamburger menu styling */
+        .hamburger-menu {
             position: fixed;
             top: 20px;
             right: 20px;
@@ -38,40 +39,64 @@
 
         /* Menu overlay styling */
         .menu-overlay {
-            display: none; /* Hide by default */
+            display: none; /* Hidden by default */
             position: fixed;
             top: 0;
-            right: 0;
-            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.95); /* Black background with transparency */
             color: white;
-            width: 250px;
-            height: 100%;
-            overflow-y: auto;
+            width: 100vw;
+            height: 100vh;
             z-index: 1000; /* Ensure it stays on top of other content */
-            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .menu-overlay ul {
             list-style-type: none;
             padding: 0;
+            text-align: center;
         }
 
         .menu-overlay li {
-            margin: 10px 0;
+            margin: 20px 0;
         }
 
         .menu-overlay a {
             color: white;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 24px;
+        }
+
+        .menu-overlay a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Query for Mobile Devices */
+        @media (max-width: 768px) {
+            .image-container img {
+                content: url('storymobile.png'); /* Switch to mobile image */
+            }
+
+            .hamburger-menu {
+                font-size: 20px;
+            }
+
+            .menu-overlay a {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
 <body>
+
+    <!-- Image Container -->
     <div class="image-container">
         <img src="our story.png" alt="Our Story">
     </div>
-     <!-- Hamburger menu -->
+
+    <!-- Hamburger menu -->
     <div class="hamburger-menu" onclick="toggleMenu()">
         ☰
     </div>
@@ -86,6 +111,12 @@
         </ul>
     </div>
 
-    <script src="script.js"></script>
+    <!-- JavaScript -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
 </body>
 </html>
