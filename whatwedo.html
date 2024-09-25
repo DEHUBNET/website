@@ -23,7 +23,7 @@
         }
 
         .logow {
-            width: 208px; /* Increased width slightly */
+            width: 208px; /* Adjusted logo width */
             height: auto;
             margin: 20px auto 0 auto;
             display: block;
@@ -46,17 +46,19 @@
             color: white;
         }
 
+        /* Columns section */
         .columns {
             display: flex;
-            justify-content: space-around; /* Space between columns */
-            margin-top: 20px; /* Reduced margin */
+            justify-content: center; /* Center align Strategy column */
+            margin-top: 20px;
+            gap: 40px; /* Adds moderate spacing between columns */
             flex-wrap: wrap;
         }
 
         .column {
             width: 30%;
-            padding: 0 20px;
-            text-align: left; /* Left-aligned */
+            padding: 0 10px; /* Reduced padding */
+            text-align: left; /* Left-aligned content */
         }
 
         .column h2 {
@@ -73,6 +75,7 @@
             font-size: 20px; /* Increased by 2px */
         }
 
+        /* Hamburger menu styling */
         .hamburger-menu-black {
             position: fixed;
             top: 20px;
@@ -86,6 +89,7 @@
             z-index: 1000;
         }
 
+        /* Menu overlay styling */
         .menu-overlay {
             display: none;
             position: fixed;
@@ -126,6 +130,7 @@
             text-decoration: underline;
         }
 
+        /* Logo inside the menu */
         .menu-overlay .logomenu {
             width: 150px;
             height: auto;
@@ -201,9 +206,9 @@
     <!-- Logo -->
     <img src="logow.png" alt="DEHUB Logo" class="logow">
 
-    <!-- Columns moved up -->
+    <!-- Columns section with adjusted alignment -->
     <div class="columns">
-        <!-- Column 1: Strategy -->
+        <!-- Centered Strategy Column -->
         <div class="column">
             <h2>Strategy</h2>
             <ul>
@@ -215,7 +220,7 @@
             </ul>
         </div>
 
-        <!-- Column 2: Creativity -->
+        <!-- Creativity Column next to Strategy -->
         <div class="column">
             <h2>Creativity</h2>
             <ul>
@@ -231,7 +236,7 @@
             </ul>
         </div>
 
-        <!-- Column 3: Production -->
+        <!-- Production Column next to Strategy -->
         <div class="column">
             <h2>Production</h2>
             <ul>
