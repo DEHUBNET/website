@@ -18,61 +18,61 @@
             font-family: 'Operetta', Arial, sans-serif;
             margin: 5;
             padding: 0;
-            background-color: black; /* Set background color to black */
-            color: white; /* Default text color */
+            background-color: black;
+            color: white;
         }
 
         .logow {
-            width: 206px; /* Set width of the logo */
-            height: auto; /* Maintain aspect ratio */
-            margin: 20px auto 0 auto; /* Center horizontally and add top margin */
-            display: block; /* Ensures the image is treated as a block element */
+            width: 208px; /* Increased width slightly */
+            height: auto;
+            margin: 20px auto 0 auto;
+            display: block;
         }
 
         h1 {
-            font-family: 'Open Sans', Arial, sans-serif; /* Use Open Sans for h1 */
-            font-size: 28px;
+            font-family: 'Open Sans', Arial, sans-serif;
+            font-size: 30px; /* Increased by 2px */
             font-weight: bold;
             margin-top: 40px;
-            text-align: center;
-            color: white; /* Title text color */
+            text-align: left; /* Left-aligned */
+            color: white;
         }
 
         p {
-            font-size: 18px;
+            font-size: 20px; /* Increased by 2px */
+            line-height: 1.8; /* Added more interline for better readability */
             margin: 20px;
-            text-align: justify; /* This will justify the text */
-            text-justify: inter-word; /* This will ensure the words are justified */
-            color: white; /* Paragraph text color */
+            text-align: left; /* Left-aligned */
+            color: white;
         }
 
         .columns {
             display: flex;
-            justify-content: center;
-            margin-top: 40px;
-            flex-wrap: wrap; /* Ensure columns wrap on smaller screens */
+            justify-content: space-around; /* Space between columns */
+            margin-top: 20px; /* Reduced margin */
+            flex-wrap: wrap;
         }
 
         .column {
             width: 30%;
             padding: 0 20px;
-            text-align: center;
+            text-align: left; /* Left-aligned */
         }
 
         .column h2 {
-            font-size: 20px;
+            font-size: 22px; /* Increased by 2px */
             font-weight: bold;
             margin-bottom: 10px;
-            color: white; /* Column headings color */
+            color: white;
         }
 
         .column ul {
             list-style-type: square;
             padding-left: 20px;
-            color: white; /* List items color */
+            color: white;
+            font-size: 20px; /* Increased by 2px */
         }
 
-        /* Hamburger menu styling */
         .hamburger-menu-black {
             position: fixed;
             top: 20px;
@@ -82,27 +82,26 @@
             padding: 10px;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 24px;
-            z-index: 1000; /* Ensure it stays on top of other content */
+            font-size: 26px; /* Increased by 2px */
+            z-index: 1000;
         }
 
-        /* Menu overlay styling for fullscreen */
         .menu-overlay {
-            display: none; /* Hide by default */
+            display: none;
             position: fixed;
             top: 0;
             left: 0;
-            background-color: rgba(0, 0, 0, 0.95); /* Almost fully opaque background */
+            background-color: rgba(0, 0, 0, 0.95);
             color: white;
             width: 100vw;
             height: 100vh;
-            z-index: 1000; /* Ensure it stays on top of other content */
+            z-index: 1000;
             padding: 20px;
             text-align: center;
         }
 
         .menu-overlay.show {
-            display: flex; /* Display flex to center content */
+            display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -120,29 +119,28 @@
         .menu-overlay a {
             color: white;
             text-decoration: none;
-            font-size: 24px; /* Increase font size for better visibility */
+            font-size: 26px; /* Increased by 2px */
         }
 
         .menu-overlay a:hover {
             text-decoration: underline;
         }
 
-        /* Logo inside the menu */
         .menu-overlay .logomenu {
             width: 150px;
             height: auto;
-            margin-bottom: 40px; /* Add some space below the logo */
+            margin-bottom: 40px;
         }
 
         /* Responsive Design for Mobile Devices */
         @media (max-width: 768px) {
             h1 {
-                font-size: 24px;
+                font-size: 26px; /* Increased by 2px */
                 margin-top: 20px;
             }
 
             p {
-                font-size: 16px;
+                font-size: 18px; /* Increased by 2px */
                 margin: 10px;
             }
 
@@ -157,16 +155,16 @@
             }
 
             .column h2 {
-                font-size: 18px;
+                font-size: 20px; /* Increased by 2px */
             }
 
             .hamburger-menu-black {
-                font-size: 20px;
+                font-size: 22px; /* Increased by 2px */
                 padding: 8px;
             }
 
             .menu-overlay a {
-                font-size: 20px;
+                font-size: 22px; /* Increased by 2px */
             }
         }
 
@@ -177,23 +175,23 @@
             }
 
             h1 {
-                font-size: 20px;
+                font-size: 22px; /* Increased by 2px */
             }
 
             p {
-                font-size: 14px;
+                font-size: 16px; /* Increased by 2px */
             }
 
             .column h2 {
-                font-size: 16px;
+                font-size: 18px; /* Increased by 2px */
             }
 
             .menu-overlay a {
-                font-size: 18px;
+                font-size: 20px; /* Increased by 2px */
             }
 
             .hamburger-menu-black {
-                font-size: 18px;
+                font-size: 20px; /* Increased by 2px */
             }
         }
     </style>
@@ -202,14 +200,8 @@
 
     <!-- Logo -->
     <img src="logow.png" alt="DEHUB Logo" class="logow">
-    <br><br><br>
-    <!-- Title -->
-    <h1>WHAT WE DO</h1>
 
-    <!-- Description -->
-    <p>We are a creative hub, working across architecture, design and art. We craft impactful brand strategies to captivate customers and we create architectural and design projects. From conceptualization to execution we prioritize attention to detail and creativity, ensuring that each project is a harmonious blend of aesthetic and functionality.</p>
-
-    <!-- Columns -->
+    <!-- Columns moved up -->
     <div class="columns">
         <!-- Column 1: Strategy -->
         <div class="column">
@@ -255,6 +247,9 @@
             </ul>
         </div>
     </div>
+
+    <!-- Description moved below columns -->
+    <p>We are a creative hub, working across architecture, design and art. We craft impactful brand strategies to captivate customers and we create architectural and design projects. From conceptualization to execution we prioritize attention to detail and creativity, ensuring that each project is a harmonious blend of aesthetic and functionality.</p>
     
     <!-- Hamburger menu -->
     <div class="hamburger-menu-black" onclick="toggleMenu()">
@@ -263,10 +258,8 @@
 
     <!-- Menu overlay -->
     <div class="menu-overlay" id="menu">
-        <!-- Logo inside the menu -->
         <img src="logo.png" alt="DEHUB Logo" class="logomenu">
         
-        <!-- Menu Items -->
         <ul>
             <li><a href="index.html">Homepage</a></li>
             <li><a href="whoweare.html">Who we are</a></li>
@@ -278,7 +271,7 @@
    <script>
        function toggleMenu() {
            const menu = document.getElementById('menu');
-           menu.classList.toggle('show'); // Toggle the 'show' class on the menu
+           menu.classList.toggle('show');
        }
    </script>
 
