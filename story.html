@@ -3,120 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Who we are | DEHUBNET</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            overflow: auto;
-            height: 100%;
-        }
-        .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        img {
-            display: block;
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Hamburger menu styling */
-        .hamburger-menu {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: black;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 24px;
-            z-index: 1000; /* Ensure it stays on top of other content */
-        }
-
-        /* Menu overlay styling */
-        .menu-overlay {
-            display: none; /* Hidden by default */
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, 0.95); /* Black background with transparency */
-            color: white;
-            width: 100vw;
-            height: 100vh;
-            z-index: 1000; /* Ensure it stays on top of other content */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .menu-overlay ul {
-            list-style-type: none;
-            padding: 0;
-            text-align: center;
-        }
-
-        .menu-overlay li {
-            margin: 20px 0;
-        }
-
-        .menu-overlay a {
-            color: white;
-            text-decoration: none;
-            font-size: 24px;
-        }
-
-        .menu-overlay a:hover {
-            text-decoration: underline;
-        }
-
-        /* Media Query for Mobile Devices */
-        @media (max-width: 768px) {
-            .image-container img {
-                content: url('storymobile.png'); /* Switch to mobile image */
-            }
-
-            .hamburger-menu {
-                font-size: 20px;
-            }
-
-            .menu-overlay a {
-                font-size: 20px;
-            }
-        }
-    </style>
+    <title>Our Story | DEHUBNET</title>
+    <link rel="stylesheet" href="stylestory.css">
 </head>
 <body>
-
-    <!-- Image Container -->
-    <div class="image-container">
-        <img src="our story.png" alt="Our Story">
+    <div class="container">
+        <div class="left-side">
+            <img src="Franci.png" alt="Franci" class="center-image">
+        </div>
+        <div class="right-side">
+            <div class="text-above">Example Text Above</div>
+            <img src="example.png" alt="Example" class="example-image">
+            <div class="text-below">Example Text Below</div>
+        </div>
     </div>
-
-    <!-- Hamburger menu -->
-    <div class="hamburger-menu" onclick="toggleMenu()">
-        ☰
-    </div>
-
-    <!-- Menu overlay with centered options -->
-    <div class="menu-overlay" id="menu">
-        <ul>
-            <li><a href="whoweare.html">Who we are</a></li>
-            <li><a href="whatwedo.html">What we do</a></li>
-            <li><a href="story.html">Our Story</a></li>
-            <li><a href="contacts.html">Contact</a></li>
-        </ul>
-    </div>
-
-    <!-- JavaScript -->
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('menu');
-            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-        }
-    </script>
 </body>
 </html>
