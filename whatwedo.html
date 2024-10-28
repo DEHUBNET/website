@@ -16,14 +16,14 @@
 
         body {
             font-family: 'Operetta', Arial, sans-serif;
-            margin: 5;
+            margin: 0;
             padding: 0;
             background-color: black;
             color: white;
         }
 
         .logow {
-            width: 208px; /* Adjusted logo width */
+            width: 208px;
             height: auto;
             margin: 20px auto 0 auto;
             display: block;
@@ -31,10 +31,10 @@
 
         h1 {
             font-family: 'Open Sans', Arial, sans-serif;
-            font-size: 30px; /* Increased by 2px */
+            font-size: 30px;
             font-weight: bold;
             margin-top: 40px;
-            text-align: left; /* Left-aligned */
+            text-align: left;
             color: white;
         }
 
@@ -42,37 +42,40 @@
             font-size: 20px;
             line-height: 1.8;
             margin: 20px;
-            text-align: center; /* Center-justified text */
+            text-align: center;
             color: white;
         }
 
         /* Columns section */
         .columns {
             display: flex;
-            justify-content: center; /* Center align Strategy column */
+            justify-content: center;
             margin-top: 20px;
-            gap: 40px; /* Adds moderate spacing between columns */
+            gap: 40px;
             flex-wrap: wrap;
         }
 
         .column {
             width: 30%;
-            padding: 0 10px; /* Reduced padding */
-            text-align: center; /* Left-aligned content */
+            padding: 0 10px;
+            text-align: center;
+            line-height: 2; /* Add line height for better spacing */
         }
 
         .column h2 {
-            font-size: 22px; /* Increased by 2px */
+            font-family: 'Open Sans', Arial, sans-serif; /* Use Open Sans for consistency */
+            font-size: 22px;
             font-weight: bold;
             margin-bottom: 10px;
             color: white;
         }
 
-        .column ul {
+        .column ul, .column p {
             list-style-type: square;
             padding-left: 20px;
             color: white;
-            font-size: 20px; /* Increased by 2px */
+            font-size: 20px;
+            line-height: 1.8; /* Add line height to improve readability */
         }
 
         /* Hamburger menu styling */
@@ -85,7 +88,7 @@
             padding: 10px;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 26px; /* Increased by 2px */
+            font-size: 26px;
             z-index: 1000;
         }
 
@@ -123,7 +126,7 @@
         .menu-overlay a {
             color: white;
             text-decoration: none;
-            font-size: 26px; /* Increased by 2px */
+            font-size: 26px;
         }
 
         .menu-overlay a:hover {
@@ -140,12 +143,12 @@
         /* Responsive Design for Mobile Devices */
         @media (max-width: 768px) {
             h1 {
-                font-size: 26px; /* Increased by 2px */
+                font-size: 26px;
                 margin-top: 20px;
             }
 
             p {
-                font-size: 18px; /* Increased by 2px */
+                font-size: 18px;
                 margin: 10px;
             }
 
@@ -158,18 +161,20 @@
                 width: 90%;
                 margin-bottom: 20px;
             }
-
             .column h2 {
-                font-size: 20px; /* Increased by 2px */
-            }
+                font-family: 'Operetta', Arial, sans-serif; /* Set font to Operetta */
+                font-size: 22px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: white;
 
             .hamburger-menu-black {
-                font-size: 22px; /* Increased by 2px */
+                font-size: 22px;
                 padding: 8px;
             }
 
             .menu-overlay a {
-                font-size: 22px; /* Increased by 2px */
+                font-size: 22px;
             }
         }
 
@@ -180,24 +185,24 @@
             }
 
             h1 {
-                font-size: 22px; /* Increased by 2px */
+                font-size: 22px;
             }
 
             p {
-                font-size: 16px; /* Increased by 2px */
-                justify: center
+                font-size: 16px;
+                text-align: center;
             }
 
             .column h2 {
-                font-size: 18px; /* Increased by 2px */
+                font-size: 18px;
             }
 
             .menu-overlay a {
-                font-size: 20px; /* Increased by 2px */
+                font-size: 20px;
             }
 
             .hamburger-menu-black {
-                font-size: 20px; /* Increased by 2px */
+                font-size: 20px;
             }
         }
     </style>
@@ -206,56 +211,46 @@
 
     <!-- Logo -->
     <img src="logow.png" alt="DEHUB Logo" class="logow">
-<br> <br> <br>
+<br><br><br>
     <!-- Columns section with adjusted alignment -->
     <div class="columns">
-        <!-- Centered Strategy Column -->
+        <!-- Strategy Column -->
         <div class="column">
             <h2>Strategy</h2>
-            
-                -Brand Building
-                <br>
-                -Partnership
-                <br>
-                -Business Development
-            
+            <p>
+                - Brand Building<br>
+                - Partnership<br>
+                - Business Development
+            </p>
         </div>
 
         <!-- Creativity Column next to Strategy -->
         <div class="column">
             <h2>Creativity</h2>
-            <ul>
-                -Creative Direction
-                <br>
-                -Creative Collaboration
-                <br>
-                -Interior Design Project
-                <br>
-                -Industrial Design Project
-                <br>
-                -Architectural Project
-            </ul>
+            <p>
+                - Creative Direction<br>
+                - Creative Collaboration<br>
+                - Interior Design Project<br>
+                - Industrial Design Project<br>
+                - Architectural Project
+            </p>
         </div>
 
         <!-- Production Column next to Strategy -->
         <div class="column">
             <h2>Production</h2>
-            <ul>
-                -Turn Key Project
-                <br>
-                -Buying Office
-                <br>
-                -Production and Logistic
-                <br>
-                -Event Production
-                <br>
-                -Experience Creation
-            </ul>
+            <p>
+                - Turn Key Project<br>
+                - Buying Office<br>
+                - Production and Logistic<br>
+                - Event Production<br>
+                - Experience Creation
+            </p>
         </div>
     </div>
 <br><br><br><br><br><br><br><br><br><br><br><br>
-    <!-- Description moved below columns -->
-    <p>We are a creative hub, working across architecture, design and art. We craft impactful brand strategies to captivate customers and we create <br>architectural and design projects. From conceptualization to execution we prioritize attention to detail and creativity, ensuring that <br>each project is a harmonious blend of aesthetic and functionality.</p>
+    <!-- Description -->
+    <p>We are a creative hub, working across architecture, design, and art. We craft impactful brand strategies to captivate customers, creating <br>architectural and design projects that blend aesthetics and functionality with attention to detail and creativity.</p>
     
     <!-- Hamburger menu -->
     <div class="hamburger-menu-black" onclick="toggleMenu()">
@@ -274,12 +269,12 @@
         </ul>
     </div>
 
-   <script>
-       function toggleMenu() {
-           const menu = document.getElementById('menu');
-           menu.classList.toggle('show');
-       }
-   </script>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
 
 </body>
 </html>
