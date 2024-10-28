@@ -3,43 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Story | DEHUBNET</title>
-    <link rel="stylesheet" href="stylestory.css">
+    <title>DeHub Story</title>
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            font-family: 'Operetta', serif;
+            overflow-x: hidden;
+            color: white;
+        }
+        /* Fullscreen background video */
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        /* Full page content container */
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            font-size: 24px;
+            text-align: justify;
+        }
+        /* Updated Hamburger Menu Icon */
+        .hamburger-menu-w {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 2;
+            color: white;
+        }
+        /* Overlay menu styles */
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .menu-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .menu-overlay ul {
+            list-style: none;
+            text-align: center;
+        }
+        .menu-overlay li {
+            margin: 20px 0;
+        }
+        .menu-overlay a {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+            font-family: 'Operetta', serif;
+        }
+        /* Scrolling content styles */
+        .scroll-content {
+            margin-top: 80vh;
+            display: flex;
+            align-items: center;
+        }
+        .scroll-content img {
+            width: 200px;
+            margin-right: 20px;
+        }
+        .scroll-content .text-box {
+            max-width: 600px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="left-side">
-            <img src="franci.jpg" alt="Franci" class="center-image">
-        </div>
-        <div class="right-side">
-            <div class="text-above">We are a team of poliedric creatives and consultants who have supported businesses, organizations, clients in creating value and accelerate their growth through sustainable and inclusive transformation processes.
-We have a great experience in finding solutions and we have  worked with high end clients providing them a top luxury  service, from  design turn key projects to a 360° buying office service.
-We have helped design companies grown increasing their  brand awareness and developing their commercial capabilities thanks to disruptive retail and marketing strategies. We have a proven track record in our respective field that we have increased during the years working for top level clients across the world.
 
-</div>
+    <!-- Background video -->
+    <video class="video-bg" src="story-bg.mp4" autoplay loop muted></video>
 
-            <div class="text-below">Example Text Below</div>
-                <video autoplay muted loop id="bg-video">
-        <source src="story-bg.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-    </video>
-            
-            <!-- Hamburger menu -->
-    <div class="hamburger-menu" onclick="toggleMenu()">
+    <!-- Updated Hamburger Menu Icon -->
+    <div class="hamburger-menu-w" onclick="toggleMenu()">
+        ☰
     </div>
 
-    <!-- Menu overlay with centered options -->
+    <!-- Menu Overlay with Links -->
     <div class="menu-overlay" id="menu">
         <ul>
-            <li><a href="whoweare.html">Who we are</a></li>
-            <li><a href="whatwedo.html">What we do</a></li>
-            <li><a href="story.html">Our Story</a></li>
-            <li><a href="contacts.html">Contact</a></li>
+            <li><a href="whoweare">Who we are</a></li>
+            <li><a href="whatwedo">What we do</a></li>
+            <li><a href="story">Our Story</a></li>
+            <li><a href="contacts">Contact</a></li>
         </ul>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Main Content -->
+    <div class="content">
+        <p>
+            For over two decades, our reputation as pioneers of innovative, bespoke design has earned us interior
+            design assignments and development management projects around the world. We have created stunning aesthetics
+            for lavish homes, yachts, and a wide range of commercial environments, establishing unique and personal
+            aesthetics for our clients. At the heart of DeHub's business is a team of creative individuals united by
+            an instant work ethic and a passion for pushing boundaries. We are always looking for new talent to continue
+            driving creativity and innovation.
+        </p>
+        <br>
+        <p>
+            Conceived as a talent incubator, DeHub operates as one of the leading company in Europe in the management of
+            architects, interior designers and product designers. DeHub, an active strategist, prides itself on fully
+            accompanying its clients, be they retail brands, hospitality groups or private commissions, by engaging in
+            the creative process and selecting designers and architects from its exclusive roster and vast global network.
+        </p>
+    </div>
+
+    <!-- Scrolling Content -->
+    <div class="scroll-content">
+        <img src="franci.png" alt="Franci Image">
+        <div class="text-box">
+            <p>“Progettare è come comunicare: significa creare legami e i legami creano il mondo. Ogni progetto, cliente o marchio ha sempre una storia da raccontare, oggi cambia solo il modo in cui lo si fa. DeHub si distingue per la sua attenzione taylormade verso ogni cliente, la creatività e l’innovazione”</p>
+            <br>
+            <p>
+                Conceived as a talent incubator, DeHub operates as one of the leading company in Europe in the management
+                of architects, interior designers and product designers. DeHub, an active strategist, prides itself on
+                fully accompanying its clients, be they retail brands, hospitality groups or private commissions, by
+                engaging in the creative process and selecting designers and architects from its exclusive roster and
+                vast global network.
+            </p>
         </div>
     </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
