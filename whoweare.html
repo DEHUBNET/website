@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who we are | DEHUBNET</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Fullscreen video background -->
+    <video autoplay muted loop id="bg-video">
+        <source src="whoweare.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    
+    <!-- Hamburger menu -->
+    <div class="hamburger-menu-w" onclick="toggleMenu()">
+        ☰
+    </div>
+
+    <!-- Menu overlay with centered options -->
+    <div class="menu-overlay" id="menu">
+        <ul>
+            <li><a href="index">Homepage</a></li>
+            <li><a href="whatwedo">What we do</a></li>
+            <li><a href="story">Our Story</a></li>
+            <li><a href="contacts">Contact</a></li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
