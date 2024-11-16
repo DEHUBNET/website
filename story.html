@@ -28,23 +28,21 @@
         }
         /* Logo container */
         .logo-container {
-            position: fixed;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1;
+            position: relative;
+            text-align: center;
+            margin-top: 10px;
+            z-index: 100;
         }
         .logo-container img {
             width: 150px; /* Adjust size as needed */
         }
-        /* Full page content container */
-        .content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        /* Text container below the logo */
+        .text-container {
+            margin-top: 20px; /* Space between logo and text */
             padding: 20px;
             max-width: 1000px;
-            margin: auto;
+            margin-left: auto;
+            margin-right: auto;
             font-size: 24px;
             text-align: justify;
         }
@@ -90,22 +88,6 @@
             text-decoration: none;
             font-family: 'Operetta', serif;
         }
-        /* Scrolling content styles */
-        .scroll-content {
-            margin-top: 80vh;
-            display: flex;
-            align-items: center;
-            padding: 20px;
-        }
-        .scroll-content img {
-            width: 200px;
-            margin-left: 20px;
-        }
-        .scroll-content .text-box {
-            max-width: 600px;
-            margin-left: auto;
-            text-align: center;
-        }
     </style>
 </head>
 <body>
@@ -118,23 +100,8 @@
         <img src="logow.png" alt="DEHUBNET Logo">
     </div>
 
-    <!-- Hamburger Menu Icon -->
-    <div class="hamburger-menu-w" onclick="toggleMenu()">
-        ☰
-    </div>
-
-    <!-- Menu Overlay with Links -->
-    <div class="menu-overlay" id="menu">
-        <ul>
-            <li><a href="whoweare">Who we are</a></li>
-            <li><a href="whatwedo">What we do</a></li>
-            <li><a href="story">Our Story</a></li>
-            <li><a href="contacts">Contact</a></li>
-        </ul>
-    </div>
-
-    <!-- Main Content -->
-    <div class="content">
+    <!-- Text under the logo -->
+    <div class="text-container">
         <p>
             For over two decades, our reputation as pioneers of innovative, bespoke design has earned us interior
             design assignments and development management projects around the world. We have created stunning aesthetics
@@ -152,20 +119,19 @@
         </p>
     </div>
 
-    <!-- Scrolling Content -->
-    <div class="scroll-content">
-        <img src="franci.jpeg" alt="Franci Image">
-        <div class="text-box">
-            <p>“Progettare è come comunicare: significa creare legami e i legami creano il mondo. Ogni progetto, cliente o marchio ha sempre una storia da raccontare, oggi cambia solo il modo in cui lo si fa. DeHub si distingue per la sua attenzione taylormade verso ogni cliente, la creatività e l’innovazione”</p>
-            <br>
-            <p>
-                Conceived as a talent incubator, DeHub operates as one of the leading company in Europe in the management
-                of architects, interior designers and product designers. DeHub, an active strategist, prides itself on
-                fully accompanying its clients, be they retail brands, hospitality groups or private commissions, by
-                engaging in the creative process and selecting designers and architects from its exclusive roster and
-                vast global network.
-            </p>
-        </div>
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger-menu-w" onclick="toggleMenu()">
+        ☰
+    </div>
+
+    <!-- Menu Overlay with Links -->
+    <div class="menu-overlay" id="menu">
+        <ul>
+            <li><a href="whoweare">Who we are</a></li>
+            <li><a href="whatwedo">What we do</a></li>
+            <li><a href="story">Our Story</a></li>
+            <li><a href="contacts">Contact</a></li>
+        </ul>
     </div>
 
     <script>
