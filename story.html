@@ -7,7 +7,7 @@
     <style>
         /* Reset styles */
         * {
-            margin: 4;
+            margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
@@ -26,18 +26,29 @@
             object-fit: cover;
             z-index: -1;
         }
+        /* Logo container */
+        .logo-container {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        .logo-container img {
+            width: 150px; /* Adjust size as needed */
+        }
         /* Full page content container */
         .content {
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 20px;
-            max-width: 1000px; /* Increased width */
+            max-width: 1000px;
             margin: auto;
             font-size: 24px;
             text-align: justify;
         }
-        /* Updated Hamburger Menu Icon */
+        /* Hamburger Menu Icon */
         .hamburger-menu-w {
             position: fixed;
             top: 20px;
@@ -88,12 +99,12 @@
         }
         .scroll-content img {
             width: 200px;
-            margin-left: 20px; /* Margin from left */
+            margin-left: 20px;
         }
         .scroll-content .text-box {
             max-width: 600px;
-            margin-left: auto; /* Align text more to the right */
-            text-align: center; /* Centered text */
+            margin-left: auto;
+            text-align: center;
         }
     </style>
 </head>
@@ -102,7 +113,12 @@
     <!-- Background video -->
     <video class="video-bg" src="story-bg.mp4" autoplay loop muted></video>
 
-    <!-- Updated Hamburger Menu Icon -->
+    <!-- Logo -->
+    <div class="logo-container">
+        <img src="logow.png" alt="DEHUBNET Logo">
+    </div>
+
+    <!-- Hamburger Menu Icon -->
     <div class="hamburger-menu-w" onclick="toggleMenu()">
         ☰
     </div>
@@ -140,7 +156,6 @@
     <div class="scroll-content">
         <img src="franci.jpeg" alt="Franci Image">
         <div class="text-box">
-            <br><br><br>
             <p>“Progettare è come comunicare: significa creare legami e i legami creano il mondo. Ogni progetto, cliente o marchio ha sempre una storia da raccontare, oggi cambia solo il modo in cui lo si fa. DeHub si distingue per la sua attenzione taylormade verso ogni cliente, la creatività e l’innovazione”</p>
             <br>
             <p>
