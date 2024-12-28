@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who We Are | DeHub</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Font Import */
+        @font-face {
+            font-family: 'Operetta';
+            src: url('operetta-regular.ttf') format('truetype');
+        }
+
+        body {
+            font-family: 'Operetta', sans-serif;
+            font-size: 18px;
+            color: white;
+            overflow-x: hidden;
+            margin: 0;
+        }
+
+        /* Fullscreen Video Background */
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Content Container */
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+            height: 100vh;
+        }
+
+        /* Text Sections */
+        .text-left, .text-right {
+            width: 48%;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Slight background for readability */
+            border-radius: 10px;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-right {
+            text-align: left;
+        }
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 768px) {
+            .text-left, .text-right {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .text-left:last-child {
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Video Background -->
+    <video autoplay muted loop id="bg-video">
+        <source src="whowearebg.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Content Section -->
+    <div class="content">
+        <div class="text-left">
+            <p>
+                For over two decades, our reputation as pioneers of innovative, bespoke design has earned us interior design assignments and development management projects around the world. We have created stunning aesthetics for lavish homes, yachts, and a wide range of commercial environments, establishing unique and personal aesthetics for our clients. At the heart of DeHub's business is a team of creative individuals united by an instant work ethic and a passion for pushing boundaries. We are always looking for new talent to continue driving creativity and innovation.
+            </p>
+            <p>
+                Conceived as a talent incubator, DeHub operates as one of the leading company in Europe in the management of architects, interior designers and product designers. DeHub, an active strategist, prides itself on fully accompanying its clients, be they retail brands, hospitality groups or private commissions, by engaging in the creative process and selecting designers and architects from its exclusive roster and vast global network.
+            </p>
+        </div>
+
+        <div class="text-right">
+            <p>
+                “Progettare è come comunicare: significa creare legami e i legami creano il mondo. Ogni progetto, cliente o marchio ha sempre una storia da raccontare, oggi cambia solo il modo in cui lo si fa. DeHub si distingue per la sua attenzione taylormade verso ogni cliente, la creatività e l’innovazione”
+            </p>
+            <p>
+                Conceived as a talent incubator, DeHub operates as one of the leading company in Europe in the management of architects, interior designers and product designers. DeHub, an active strategist, prides itself on fully accompanying its clients, be they retail brands, hospitality groups or private commissions, by engaging in the creative process and selecting designers and architects from its exclusive roster and vast global network.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
