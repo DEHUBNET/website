@@ -6,35 +6,71 @@
     <title>Who we are | DEHUBNET</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-    /* CSS for full-screen video background */
-    #bg-video {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-        z-index: -1;
-    }
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    /* Style adjustments for the overlay menu */
-    .menu-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: none;
-        background-color: rgba(0, 0, 0, 0.8);
-        justify-content: center;
-        align-items: center;
-        z-index: 1;
-    }
-</style>
+        /* Fullscreen video background */
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
 
+        /* Fix for Safari viewport height issue */
+        @supports (-webkit-touch-callout: none) {
+            #bg-video {
+                height: calc(100vh - env(safe-area-inset-top));
+            }
+        }
+
+        /* Style adjustments for the overlay menu */
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+
+        /* Hamburger menu style */
+        .hamburger-menu-w {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        /* Menu list styling */
+        .menu-overlay ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        .menu-overlay ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 2rem;
+            margin: 1rem;
+            display: block;
+        }
+    </style>
 </head>
 <body>
-
     <!-- Fullscreen video background -->
     <video autoplay muted loop id="bg-video">
         <source src="whoweare.mp4" type="video/mp4">
@@ -56,5 +92,12 @@
         </ul>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // Toggle menu visibility
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+        }
+    </script>
 </body>
+</html>
