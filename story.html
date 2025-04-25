@@ -16,12 +16,6 @@
             overflow-x: hidden;
             color: white;
         }
-        .textbox{
-            font-size:24px;
-            text-align: justify;
-            margin-right: auto;
-            
-        }
         /* Fullscreen background video */
         .video-bg {
             position: fixed;
@@ -50,6 +44,32 @@
             font-size: 24px;
             text-align: justify;
         }
+
+        /* New container for text and image */
+        .text-image-container {
+            display: flex;
+            flex-direction: row; /* Align horizontally */
+            align-items: center; /* Center the content vertically */
+            margin-bottom: 20px;
+        }
+
+        /* Paragraph styling */
+        .left-paragraph {
+            width: 100%;
+            text-align: justify;
+        }
+
+        .right-paragraph {
+            width: calc(100% - 40px); /* Adjust width to align with the first paragraph */
+            text-align: justify;
+            margin-left: 20px; /* Ensure some spacing between image and text */
+            margin-right: 0; /* Remove extra right margin */
+        }
+
+        .image-left {
+            width: 40%;
+        }
+
         /* Hamburger Menu Icon */
         .hamburger-menu-w {
             position: fixed;
@@ -60,6 +80,7 @@
             z-index: 2;
             color: white;
         }
+
         /* Overlay menu styles */
         .menu-overlay {
             position: fixed;
@@ -75,44 +96,27 @@
             visibility: hidden;
             transition: opacity 0.3s ease, visibility 0.3s ease;
         }
+
         .menu-overlay.show {
             opacity: 1;
             visibility: visible;
         }
+
         .menu-overlay ul {
             list-style: none;
             text-align: center;
         }
+
         .menu-overlay li {
             margin: 20px 0;
         }
+
         .menu-overlay a {
             color: white;
             font-size: 24px;
             text-decoration: none;
             font-family: 'Operetta', serif;
         }
-        /* Scrolling content styles */
-        .scroll-content {
-            margin-top: 40px; /* Adjust spacing for clarity */
-            display: flex;
-            align-items: center;
-            padding: 20px;
-        }
-        .scroll-content img {
-            width: 200px;
-            margin-right: 20px; /* Adjust margin */
-        }
-        .scroll-content .text-box {
-            max-width: 600px;
-            margin-left: auto;
-            text-align: center;
-            
-        }
-        .fraimg{
-            margin-left: 60px;
-        }
-        
     </style>
 </head>
 <body>
@@ -127,7 +131,8 @@
 
     <!-- Text under the logo -->
     <div class="text-container">
-        <p>
+        <!-- First paragraph -->
+        <p class="left-paragraph">
             For over two decades, our reputation as pioneers of innovative, bespoke design has earned us interior
             design assignments and development management projects around the world. We have created stunning aesthetics
             for lavish homes, yachts, and a wide range of commercial environments, establishing unique and personal
@@ -135,27 +140,15 @@
             an instant work ethic and a passion for pushing boundaries. We are always looking for new talent to continue
             driving creativity and innovation.
         </p>
-        <br>
-        <p>
-            Conceived as a talent incubator, DeHub operates as one of the leading company in Europe in the management of
-            architects, interior designers and product designers. DeHub, an active strategist, prides itself on fully
-            accompanying its clients, be they retail brands, hospitality groups or private commissions, by engaging in
-            the creative process and selecting designers and architects from its exclusive roster and vast global network.
-            <br><br><br><br><br>
-        </p>
-        <img src="franci.jpg" alt="Franci Image" class="fraimg">
-    </div>
+        <br><br>
 
-    <!-- Scrolling Content -->
-    <div class="scroll-content">
-        
-        <div class="text-box">
-            <p>“Progettare è come comunicare: significa creare legami e i legami creano il mondo. Ogni progetto, cliente o marchio ha sempre una storia da raccontare, oggi cambia solo il modo in cui lo si fa. DeHub si distingue per la sua attenzione taylormade verso ogni cliente, la creatività e l’innovazione”</p>
-            <br>
-            <p>
-                Conceived as a talent incubator, DeHub operates as one of the leading company in Europe in the management
-                of architects, interior designers and product designers. DeHub, an active strategist, prides itself on
-                fully accompanying its clients, be they retail brands, hospitality groups or private commissions, by
+        <!-- Image and second paragraph -->
+        <div class="text-image-container">
+            <img src="franci.jpg" alt="Franci Image" class="image-left">
+            <p class="right-paragraph">
+                Conceived as a talent incubator, DeHub operates as one of the leading companies in Europe in the management
+                of architects, interior designers, and product designers. DeHub, an active strategist, prides itself on
+                fully accompanying its clients, be they retail brands, hospitality groups, or private commissions, by
                 engaging in the creative process and selecting designers and architects from its exclusive roster and
                 vast global network.
             </p>
