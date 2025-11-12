@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage | DEHUBNET</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <audio id="background-music" loop>
+        <source src="sottofondo.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+    // Check if the background music is already playing
+    window.onload = function() {
+        var audio = document.getElementById('background-music');
+        
+        // Check if the audio state is already set in localStorage
+        if (!localStorage.getItem('bgMusicPlaying')) {
+            audio.play(); // Start the music for the first time
+            localStorage.setItem('bgMusicPlaying', 'true'); // Mark as playing
+        }
+
+        // When navigating to a new page, the audio element will reset, so we ensure it keeps playing
+        audio.onplay = function() {
+            localStorage.setItem('bgMusicPlaying', 'true');
+        };
+    };
+</script>
+
+
+    <!-- Fullscreen video background -->
+    <video autoplay muted loop id="bg-video">
+        <source src="home-bg.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Logo centered on top of the video -->
+    <div class="logo-container">
+        <img src="logow.png" alt="Logo" class="logo">
+    </div>
+
+    <!-- Hamburger menu -->
+    <div class="hamburger-menu-w" onclick="toggleMenu()">
+        ☰
+    </div>
+
+    <!-- Menu overlay with centered options -->
+    <div class="menu-overlay" id="menu">
+        <ul>
+            <li><a href="whoweare">Who we are</a></li>
+            <li><a href="whatwedo">What we do</a></li>
+            <li><a href="story">Our Story</a></li>
+            <li><a href="contacts">Contact</a></li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+    
+    <!-- Made with love by Giorgio Valdman -->
+    <!-- Check out credits.md -->
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who we are | DEHUBNET</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS Reset and prevent horizontal overflow */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        /* Fullscreen video background */
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Fix for Safari viewport width issue */
+        @supports (-webkit-touch-callout: none) {
+            #bg-video {
+                width: 100%;
+            }
+        }
+
+        /* Style adjustments for the overlay menu */
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+
+        /* Hamburger menu style */
+        .hamburger-menu-w {
+            position: fixed;
+            top: 15px;
+            right: 15px; /* Moved to the right */
+            z-index: 2;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        /* Menu list styling */
+        .menu-overlay ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        .menu-overlay ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 2rem;
+            margin: 1rem;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Fullscreen video background -->
+    <video autoplay muted loop id="bg-video">
+        <source src="whoweare.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    
+    <!-- Hamburger menu -->
+    <div class="hamburger-menu-w" onclick="toggleMenu()">
+        ☰
+    </div>
+
+    <!-- Menu overlay with centered options -->
+    <div class="menu-overlay" id="menu">
+        <ul>
+            <li><a href="index">Homepage</a></li>
+            <li><a href="whatwedo">What we do</a></li>
+            <li><a href="story">Our Story</a></li>
+            <li><a href="contacts">Contact</a></li>
+        </ul>
+    </div>
+
+    <script>
+        // Toggle menu visibility
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What We Do | DEHUBNET</title>
+    
+    <style>
+        @font-face {
+            font-family: 'Operetta';
+            src: url('Operetta-Regular.ttf'); /* Ensure this path is correct */
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+        body {
+            font-family: 'Operetta', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Centered logo */
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .logow {
+            width: 150px;
+            height: auto;
+        }
+
+        h1 {
+            font-family: 'Open Sans', Arial, sans-serif;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 40px;
+        }
+
+        /* Columns */
+        .columns {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            width: 100%;
+            max-width: 1000px;
+            margin-top: 20px;
+        }
+
+        .column {
+            flex: 1;
+            min-width: 280px; /* Ensure they stay on the same line until screen gets narrow */
+            padding: 10px;
+        }
+
+        .column h2 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .column p {
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        /* Hamburger menu styling */
+        .hamburger-menu-black {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 26px;
+            z-index: 1000;
+        }
+
+        /* Menu overlay styling */
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.95);
+            color: white;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1000;
+            padding: 20px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menu-overlay.show {
+            display: flex;
+        }
+
+        .menu-overlay ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .menu-overlay li {
+            margin: 20px 0;
+        }
+
+        .menu-overlay a {
+            color: white;
+            text-decoration: none;
+            font-size: 26px;
+        }
+
+        /* Last paragraph styling */
+        .description {
+            max-width: 800px;
+            margin: 20px;
+            text-align: justify;
+            text-size:20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 26px;
+            }
+            .column {
+                width: 90%;
+            }
+            .column h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo centered -->
+    <div class="logo-container">
+        <img src="logow.png" alt="DEHUB Logo" class="logow">
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+    <!-- Columns section -->
+    <div class="columns">
+        <div class="column">
+            <h2>Strategy</h2>
+            <p>Brand Building<br>Partnership<br>Business Development</p>
+        </div>
+
+        <div class="column">
+            <h2>Creativity</h2>
+            <p>Creative Direction<br>Creative Collaboration<br>Interior Design Project<br>Industrial Design Project<br>Architectural Project</p>
+        </div>
+
+        <div class="column">
+            <h2>Production</h2>
+            <p>Turn Key Project<br>Buying Office<br>Production and Logistic<br>Event Production<br>Experience Creation</p>
+        </div>
+    </div>
+<br><br><br><br><br><br>
+    <!-- Description paragraph -->
+    <p class="description">We are a creative hub, working across architecture, design, and art. We craft impactful brand strategies to captivate customers, creating architectural and design projects that blend aesthetics and functionality with attention to detail and creativity.</p>
+
+    <!-- Hamburger menu -->
+    <div class="hamburger-menu-black" onclick="toggleMenu()">
+        ☰
+    </div>
+
+    <!-- Menu overlay -->
+    <div class="menu-overlay" id="menu">
+        <ul>
+            <li><a href="index">Homepage</a></li>
+            <li><a href="whoweare">Who we are</a></li>
+            <li><a href="story">Our Story</a></li>
+            <li><a href="contacts">Contact</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | DEHUBNET</title>
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            font-family: 'Operetta', serif;
+            overflow-x: hidden;
+            color: white;
+        }
+        /* Fullscreen background video */
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        /* Logo container */
+        .logo-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .logo-container img {
+            width: 150px; /* Adjust size as needed */
+        }
+        /* Text container */
+        .text-container {
+            margin-top: 20px; /* Space between logo and text */
+            padding: 20px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 24px;
+            text-align: justify;
+        }
+
+        /* New container for text and image */
+        .text-image-container {
+            display: flex;
+            flex-direction: row; /* Align horizontally */
+            align-items: center; /* Center the content vertically */
+            margin-bottom: 20px;
+        }
+
+        /* Paragraph styling */
+        .left-paragraph {
+            width: 100%;
+            text-align: justify;
+        }
+
+        .right-paragraph {
+            width: calc(100% - 40px); /* Adjust width to align with the first paragraph */
+            text-align: justify;
+            margin-left: 20px; /* Ensure some spacing between image and text */
+            margin-right: 0; /* Remove extra right margin */
+        }
+
+        .image-left {
+            width: 40%;
+        }
+
+        /* Hamburger Menu Icon */
+        .hamburger-menu-w {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 2;
+            color: white;
+        }
+
+        /* Overlay menu styles */
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .menu-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .menu-overlay ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        .menu-overlay li {
+            margin: 20px 0;
+        }
+
+        .menu-overlay a {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+            font-family: 'Operetta', serif;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background video -->
+    <video class="video-bg" src="story-bg.mp4" autoplay loop muted></video>
+
+    <!-- Logo -->
+    <div class="logo-container">
+        <img src="logow.png" alt="DEHUBNET Logo">
+    </div>
+
+    <!-- Text under the logo -->
+    <div class="text-container">
+        <!-- First paragraph -->
+        <p class="left-paragraph">
+            For over two decades, our reputation as pioneers of innovative, bespoke design has earned us interior
+            design assignments and development management projects around the world. We have created stunning aesthetics
+            for lavish homes, yachts, and a wide range of commercial environments, establishing unique and personal
+            aesthetics for our clients. At the heart of DeHub's business is a team of creative individuals united by
+            an instant work ethic and a passion for pushing boundaries. We are always looking for new talent to continue
+            driving creativity and innovation.
+        </p>
+        <br><br>
+
+        <!-- Image and second paragraph -->
+        <div class="text-image-container">
+            <img src="franci.jpg" alt="Franci Image" class="image-left">
+            <p class="right-paragraph">
+                Conceived as a talent incubator, DeHub operates as one of the leading companies in Europe in the management
+                of architects, interior designers, and product designers. DeHub, an active strategist, prides itself on
+                fully accompanying its clients, be they retail brands, hospitality groups, or private commissions, by
+                engaging in the creative process and selecting designers and architects from its exclusive roster and
+                vast global network.
+            </p>
+        </div>
+    </div>
+
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger-menu-w" onclick="toggleMenu()">
+        ☰
+    </div>
+
+    <!-- Menu Overlay with Links -->
+    <div class="menu-overlay" id="menu">
+        <ul>
+            <li><a href="whoweare">Who we are</a></li>
+            <li><a href="whatwedo">What we do</a></li>
+            <li><a href="story">Our Story</a></li>
+            <li><a href="contacts">Contact</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | DEHUBNET</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Import the Operetta font */
+        @font-face {
+            font-family: 'Operetta';
+            src: url('https://fonts.googleapis.com/css2?family=Operetta:wght@400;700&display=swap');
+        }
+
+        /* Set the background color for the page */
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            padding: 0 20px;
+        }
+
+        /* Style for the logo at the top */
+        .logo {
+            width: 150px;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        /* Center the black square */
+        .contact-square {
+            background-color: black;
+            color: white;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-square p {
+            margin: 10px 0;
+            font-family: 'Operetta', sans-serif;
+        }
+
+        .contact-square p:first-of-type {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        /* Instagram logo and handle centered at the bottom */
+        .instagram {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Operetta', sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .instagram img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .instagram span {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo at the very top -->
+    <img src="logo.png" alt="DEHUB Logo" class="logo">
+
+    <!-- Contact information centered in the middle -->
+    <div class="contact-square">
+        <p>HEADQUARTER</p>
+        <p>VIA SANTA CROCE 6</p>
+        <p>20122 MILANO</p>
+        <p>info@dehubnet.com</p>
+        <p>WWW.DEHUBNET.COM</p>
+    </div>
+
+    <!-- Instagram section centered at the bottom -->
+    <div class="instagram">
+        <img src="ig_logo.png" alt="Instagram Logo">
+        <span>@dehubnet</span>
+    </div>
+
+<p>Dehub Srl - via Santa Croce, 6 20122 Milano <br> Partita Iva 13614020967 <br> CU T9K4ZHO <br> Legal Mail: dehub@pec.it</p>
+        <div class="menu-overlay" id="menu">
+        <ul>
+            <li><a href="whoweare">Who we are</a></li>
+            <li><a href="whatwedo">What we do</a></li>
+            <li><a href="story">Our Story</a></li>
+            <li><a href="contacts">Contact</a></li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</body>
+</html>
