@@ -3,64 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage | DEHUBNET</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-    <audio id="background-music" loop>
-        <source src="sottofondo.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <script>
-    // Check if the background music is already playing
-    window.onload = function() {
-        var audio = document.getElementById('background-music');
-        
-        // Check if the audio state is already set in localStorage
-        if (!localStorage.getItem('bgMusicPlaying')) {
-            audio.play(); // Start the music for the first time
-            localStorage.setItem('bgMusicPlaying', 'true'); // Mark as playing
+    <title>Dehub</title>
+    <style>
+        /* Base Styling */
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+            /* Ensures smooth animation of the logo */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        // When navigating to a new page, the audio element will reset, so we ensure it keeps playing
-        audio.onplay = function() {
-            localStorage.setItem('bgMusicPlaying', 'true');
-        };
-    };
-</script>
+        /* Container for content */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
+        /* Logo Styling and Animation */
+        .logo-container {
+            padding: 50px 0; /* Simulates 'big spacing' around the logo */
+        }
 
-    <!-- Fullscreen video background -->
-    <video autoplay muted loop id="bg-video">
-        <source src="home-bg.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-    </video>
+        .logo {
+            width: 150px; /* Adjust size as needed */
+            height: auto;
+            /* Apply the pulse animation */
+            animation: pulse 2s infinite ease-in-out;
+            display: block; /* Important for animation scaling */
+        }
 
-    <!-- Logo centered on top of the video -->
-    <div class="logo-container">
-        <img src="logow.png" alt="Logo" class="logo">
+        /* Define the pulse animation */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.9;
+            }
+            50% {
+                transform: scale(1.05); /* Slight enlargement */
+                opacity: 1; /* Brighter */
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0.9;
+            }
+        }
+
+        /* Text Styling */
+        .dehub-title {
+            font-size: 4em; /* Adjust size as needed */
+            font-weight: 300; /* Light weight for a modern look */
+            letter-spacing: 0.4em;
+            margin: 0;
+        }
+
+        .big-row {
+            padding: 30px 0; /* Simulates 'big spacing' */
+        }
+
+        .small-row {
+            padding: 10px 0; /* Simulates 'normal spacing' */
+        }
+
+        .big-row p {
+            font-size: 1.2em;
+            font-weight: 300;
+            text-transform: lowercase;
+            letter-spacing: 0.1em;
+            margin: 0;
+        }
+
+        .small-row p {
+            font-size: 0.9em;
+            font-weight: 200;
+            opacity: 0.7; /* Make the contact info slightly dimmer */
+            margin: 0;
+        }
+
+        .small-row a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo-container">
+            <img src="/logow.png" alt="DEHUB Logo" class="logo">
+            <h1 class="dehub-title">DEHUB</h1>
+        </div>
+
+        <div class="big-row">
+            <p>We are working on our digital presence</p>
+        </div>
+
+        <div class="small-row">
+            <p>Contact us: <a href="mailto:info@dehubnet.com">info@dehubnet.com</a></p>
+        </div>
     </div>
 
-    <!-- Hamburger menu -->
-    <div class="hamburger-menu-w" onclick="toggleMenu()">
-        ☰
-    </div>
-
-    <!-- Menu overlay with centered options -->
-    <div class="menu-overlay" id="menu">
-        <ul>
-            <li><a href="whoweare">Who we are</a></li>
-            <li><a href="whatwedo">What we do</a></li>
-            <li><a href="story">Our Story</a></li>
-            <li><a href="contacts">Contact</a></li>
-        </ul>
-    </div>
-
-    <script src="script.js"></script>
 </body>
-
-    
-    <!-- Made with love by Giorgio Valdman -->
-    <!-- Check out credits.md -->
 </html>

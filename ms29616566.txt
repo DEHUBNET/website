@@ -1,5 +1,0 @@
-﻿{
-  "Description": "File di verifica della proprietà del dominio per Microsoft 365 - posizionato nella radice del sito Web",
-  "Domain": "dehubnet.com",
-  "Id": "9d49de61-9169-4903-b6be-eb6f2c2ff8b9"
-}

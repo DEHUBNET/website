@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage | DEHUBNET</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <audio id="background-music" loop>
+        <source src="sottofondo.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+    // Check if the background music is already playing
+    window.onload = function() {
+        var audio = document.getElementById('background-music');
+        
+        // Check if the audio state is already set in localStorage
+        if (!localStorage.getItem('bgMusicPlaying')) {
+            audio.play(); // Start the music for the first time
+            localStorage.setItem('bgMusicPlaying', 'true'); // Mark as playing
+        }
+
+        // When navigating to a new page, the audio element will reset, so we ensure it keeps playing
+        audio.onplay = function() {
+            localStorage.setItem('bgMusicPlaying', 'true');
+        };
+    };
+</script>
+
+
+    <!-- Fullscreen video background -->
+    <video autoplay muted loop id="bg-video">
+        <source src="home-bg.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Logo centered on top of the video -->
+    <div class="logo-container">
+        <img src="logow.png" alt="Logo" class="logo">
+    </div>
+
+    <!-- Hamburger menu -->
+    <div class="hamburger-menu-w" onclick="toggleMenu()">
+        ☰
+    </div>
+
+    <!-- Menu overlay with centered options -->
+    <div class="menu-overlay" id="menu">
+        <ul>
+            <li><a href="whoweare">Who we are</a></li>
+            <li><a href="whatwedo">What we do</a></li>
+            <li><a href="story">Our Story</a></li>
+            <li><a href="contacts">Contact</a></li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+    
+    <!-- Made with love by Giorgio Valdman -->
+    <!-- Check out credits.md -->
+</html>
