@@ -1,110 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dehub</title>
-    <style>
-        /* Base Styling */
-        body {
-            background-color: #000;
-            color: #fff;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            text-align: center;
-            /* Ensures smooth animation of the logo */
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dehub</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      text-align: center;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      position: relative;
+    }
 
-        /* Container for content */
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    /* Keep logo centered vertically on the page */
+    .logo {
+      width: 150px;
+      height: auto;
+      animation: pulse 6s infinite ease-in-out;
+    }
 
-       
-        .logo {
-            width: 150px; /* Adjust size as needed */
-            height: auto;
-            /* Apply the pulse animation */
-            animation: pulse 6s infinite ease-in-out;
-            display: block; /* Important for animation scaling */
-        }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.9; }
+      50% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.9; }
+    }
 
-        /* Define the pulse animation */
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-                opacity: 0.9;
-            }
-            50% {
-                transform: scale(1.05); /* Slight enlargement */
-                opacity: 1; /* Brighter */
-            }
-            100% {
-                transform: scale(1);
-                opacity: 0.9;
-            }
-        }
+    /* Text container positioned lower */
+    .text-block {
+      position: absolute;
+      bottom: 10%; /* Adjust this value to control distance from bottom */
+      text-align: center;
+    }
 
-        /* Text Styling */
-        .dehub-title {
-            font-size: 4em; /* Adjust size as needed */
-            font-weight: 300; /* Light weight for a modern look */
-            letter-spacing: 0.4em;
-            margin: 0;
-        }
+    .text-block p {
+      margin: 10px 0;
+    }
 
-        .big-row {
-            padding: 50px 0; /* Simulates 'big spacing' */
-        }
+    .big-row p {
+      font-size: 1.2em;
+      font-weight: 200;
+      text-transform: lowercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+    }
 
-        .small-row {
-            padding: 10px 0; /* Simulates 'normal spacing' */
-        }
+    .small-row p {
+      font-size: 0.9em;
+      font-weight: 150;
+      opacity: 0.9;
+    }
 
-        .big-row p {
-            font-size: 1.2em;
-            font-weight: 150;
-            text-transform: lowercase;
-            letter-spacing: 0.1em;
-            margin: 0;
-        }
+    .small-row a {
+      color: #fff;
+      text-decoration: none;
+    }
 
-        .small-row p {
-            font-size: 0.9em;
-            font-weight: 200;
-            opacity: 0.9; /* Make the contact info slightly dimmer */
-            margin: 0;
-        }
-
-        .small-row a {
-            color: #fff;
-            text-decoration: none;
-        }
-    </style>
+    .small-row a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
+  <img src="/logow.png" alt="DEHUB Logo" class="logo">
 
-    <div class="container">
-        <div class="logo-container">
-            <img src="/logow.png" alt="DEHUB Logo" class="logo">
-        </div>
-
-        <div class="big-row">
-            <p>We are working on our digital presence</p>
-        </div>
-
-        <div class="small-row">
-            <p>Contact us: <a href="mailto:info@dehubnet.com">info@dehubnet.com</a></p>
-        </div>
+  <div class="text-block">
+    <div class="big-row">
+      <p>We are working on our digital presence</p>
     </div>
-
+    <div class="small-row">
+      <p>Contact us: <a href="mailto:info@dehubnet.com">info@dehubnet.com</a></p>
+    </div>
+  </div>
 </body>
 </html>
